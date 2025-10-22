@@ -136,7 +136,11 @@ p {
 
 /*CSS pour page contact*/
 .contactBody {
-    background: radial-gradient(circle at center, #1b1b1b 0%, #0a0a0a 100%);
+  background-image: url(images/BanquetHallBackground.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
     color: #f1d97a;
     font-family: 'Cinzel', serif;
     text-align: center;
@@ -208,7 +212,7 @@ footer {
     justify-content: center;
     margin: auto;
 }
-/*CSS pour le SVG*/
+/*CSS pour le SVG dans la page Contact*/
 .hogwarts-link{
   text-decoration: none;
   display: inline-block;
