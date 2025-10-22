@@ -1,0 +1,291 @@
+/*CSS pour page accueil*/
+.accueilBody {
+  background-image: url(images/hogwarts.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "Quintessential", cursive;
+  font-size: 100px;
+  text-align: center;
+  color: goldenrod;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000,
+    2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+blockquote {
+  font-family: "Quintessential", cursive;
+  font-size: 40px;
+  color: goldenrod;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000,
+    2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+p {
+  font-family: "Quintessential", cursive;
+  font-size: 25px;
+  color: goldenrod;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000,
+    2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.texteDesc {
+  font-family: "Quintessential", cursive;
+  font-size: 25px;
+  color: goldenrod;
+  text-align: justify;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000,
+    2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.imageEmbleme {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.blockquote {
+  font-style: italic;
+}
+
+.topNav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #c7a008;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  text-decoration: none;
+  color: #f1d97a;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.topNav a {
+  color: #ffd700;
+}
+.topNav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.topNav li {
+  margin: 0 20px;
+}
+
+.topNav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #f5d46c;
+}
+
+.imageMaison {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  margin-top: 120px;
+}
+.Maison {
+  text-align: center;
+  color: #f1d97a;
+  font-family: "Quintessential", cursive;
+  width: 100%;
+}
+
+.Maison p {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 0 0 6px #000;
+  margin: 0 0 8px 0;
+}
+
+.Maison img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.Maison img:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+/*CSS pour page contact*/
+.contactBody {
+    background: radial-gradient(circle at center, #1b1b1b 0%, #0a0a0a 100%);
+    color: #f1d97a;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.headerBody {
+    padding: 50px 20px 20px;
+   
+}
+
+.headerBody h1 {
+    font-size: 2.8em;
+    text-shadow: 0 0 15px #d4b100;
+}
+
+.headerBody p {
+    font-family: 'Quintessential', cursive;
+    color: #e8c04f;
+    font-size: 1.2em;
+}
+
+.contact-section {
+    margin: 50px auto;
+    background: rgba(40, 30, 10, 0.3);
+    border: 2px solid #c8a951;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+.contact-section h2 {
+    font-family: 'Quintessential', cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #bfa64b;
+}
+
+.contact-item {
+    font-family: 'Quintessential', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centre horizontalement */
+    gap: 10px; /* espace égal entre les éléments */
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+.contact-item a {
+    font-family: 'Quintessential', cursive;
+    color: #f7e98e;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    color: #fff6b4;
+}
+
+footer {
+    padding: 15px;
+    font-size: 0.9em;
+    color: #d1b15a;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+/*CSS pour le SVG*/
+.hogwarts-link{
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hogwarts-blason{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.hogwarts-blason svg{
+  filter: drop-shadow(0 0 10px #f1d97a);
+  transition: transform 0.3s ease;
+}
+.hogwarts-blason svg:hover{
+  transform: scale(1.1);
+}
+.chapeau-SVG{
+  position:relative;
+}
+
+.chapeau-SVG svg{
+  position: absolute;
+  right: 500px;
+  top: 50%;
+  transform:translateY(-50%);
+  width: 150px;
+  height: 150px;
+  fill: #f1d97a;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px #f1d97a);
+  transition: transform 0.3s ease;
+}
+.chapeau-SVG svg:hover{
+  transform: scale(1.1)
+}
+.anim {
+  width: 100%;
+  height: 200px;
+}
+
+/* Animation du hibou */
+@keyframes fly {
+  0% {
+    transform: translateX(-150px);
+    fill: #9dd437;
+  }
+  50% {
+    fill: #ffd903; 
+  }
+  100% {
+    transform: translateX(100vw);
+    fill: #221a01;
+  }
+}
+
+.hibou {
+  animation: fly 10s linear infinite;
+}
+
+/* Détails du hibou */
+.oeil-blanc {
+  fill: white;
+}
+
+.oeil-noir {
+  fill: black;
+}
+
+.bec {
+  fill: orange;
+}
+
+.aile {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 5;
+}
