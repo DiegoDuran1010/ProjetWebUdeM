@@ -1,0 +1,77 @@
+
+/* Style global de la page*/
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+/*Titres*/
+.grandTitre {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #0b3e91;
+}
+
+.petitTitres{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    color: #0b3e91;
+}
+
+/* Liens */
+a {
+    color: #0b3e91;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #238e31;
+}
+
+/*Navigation*/
+#navBar {
+    background:white;
+    padding: 10px;
+    border-bottom: 1px solid #dfe3ea;
+}
+
+nav a {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+/* Citation */
+#citation {
+    background-color: #eef2ff;
+    border: 2px solid rgb(199,210,254);
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    text-align: right;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #dfe3ea;
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+}
+
+/* Liste */
+ul {
+    list-style-type: circle; /* pour avoir des puces creuses */
+    padding-left: 20px;
+}
+
+ul li::first-letter{
+    color: #0b3e91;
+}
