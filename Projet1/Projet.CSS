@@ -1,3 +1,8 @@
+/*
+  Pierre-Nathan Duchesne (20307443)
+  Diego Felipe Duran Lezama (20246326)
+*/
+
 /*------------*/
 /* CSS global */
 /*------------*/
@@ -304,7 +309,7 @@ blockquote {
 /*-----------------------*/
 
 .contact-body {
-  background-image: url(images/BanquetHallBackground.jpg);
+  background-image: url(images/greatHall.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
