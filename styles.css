@@ -12,6 +12,17 @@
     font-family: Inter,system-ui, -apple-system,"Segoe UI", Roboto,"Helvatica Neue",Arial;
 }
 
+*{box-sizing: border-box;}
+html,body{height: 100%;}
+body{
+    margin: 0;
+    background: linear-gradient(180deg,#f7faf7 0%, var(--bg)100%);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height: 1.4;
+}
+
+
 /* container */
 .container{max-width: var(--container);margin: 0 auto;padding: 20px;}
 
@@ -26,3 +37,9 @@
 .nav{list-style: none;margin: 0;padding: 0;display: flex;gap: 14px;}
 .nav a{color:var(--muted);text-decoration: none;padding: 8px 12px;border-radius: 8px;}
 .nav a:hover, .nav a:focus{background:#e8f6ea;color: var(--accent);}
+
+/* grid layout (main) */
+.main-grid{display: grid;grid-template-columns: 1fr;gap:var(--gap);padding: 8px 0;}
+.hero{background: linear-gradient(90deg, #ffffff,#f8fff9);padding: 22px;border-radius:14px;box-shadow: 0 6px 18px rgba(47,133,90,0.06);}
+.hero h2{margin:0;font-size: 28px;color:var(--accent)}
+.subtitle{margin-top: 8px;color: var(--muted);}
