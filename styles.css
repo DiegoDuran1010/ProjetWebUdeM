@@ -73,6 +73,29 @@ body{
 .habits-table thead th{text-align: left;padding: 10px 8px;border-bottom: 2px solid #eef2f7;color: var(--muted);}
 .habits-table tbody td{padding: 12px 8px;border-bottom: 1px solid #f1f5f9;}
 .habits-table tbody tr:first-child td{border-top: 2px solid #eef2f7;}
+.progress-bar{
+    width: 150px;
+    height: 8px;
+    background:#e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.progress-fill{
+    height: 100%;
+    background: #0f0f25;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+.progrss-text{
+    margin-left: 10px;
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+}
 
 /* media sectiom */
 .media-grid{display: grid;grid-template-columns: 1fr 320px;gap: 14px;align-items: start;}
@@ -84,3 +107,18 @@ body{
 .footer-inner{display:flex;align-items: center;justify-content: space-between;gap: 12px;}
 .footer-links{list-style: none;margin: 0;padding: 0;display: flex;gap: 12px;}
 .footer-links a{color:var(--muted);text-decoration:none;}
+
+/* responsive*/
+@media (max-width:900px){
+    .card-grid{grid-template-columns: repeat(2,1fr);}
+    .add-section .form{grid-template-columns: 1fr;align-items: stretch;}
+    .media-grid{grid-template-columns: 1fr;}
+    .main-grid{gap: 12px;}
+}
+
+@media (max-width:520px){
+    .brand h1{display: none;}
+    .card-grid{grid-template-columns: 1fr;}
+    .container{padding: 12px;}
+    .hero h2{font-size: 22px;}
+}
