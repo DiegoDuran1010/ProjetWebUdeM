@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sante Hub - Tableau de bord</title>
-      <link rel="stylesheet" href="styles.css"/>
+    <title>SantéHub - Tableau de bord</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
     <header class="site-header">
@@ -14,12 +14,12 @@
           <circle cx="50" cy="50" r="45" fill="#2f855a"/>
           <path d="M30 55c6-8 14-16 26-10 10 5 12 18 2 26-10 8-28 1-28-16" fill="#fff"/>
           </svg>
-          <h1>Sante Hub</h1>
+          <h1>SantéHub</h1>
         </div>
         <nav aria-label="Navigation Principale">
           <ul class="nav">
             <li><a href="#ajouter">Ajouter</a></li>
-            <li><a href="#progres">Progress</a></li>
+            <li><a href="#progres">Progrès</a></li>
             <li><a href="#suivi">Suivi</a></li>
 
           </ul>
@@ -30,70 +30,20 @@
     <main class="container main-grid">
       <!--Tableau de bord intro-->
       <section class="hero" aria-labelledby="titre-principal">
-        <h2 id="titre-principal">Sante Hub</h2>
-        <p class="subtitle">Suivez vos habitudes quotidiennes et surveillez vos progres</p>
+        <h2 id="titre-principal">SantéHub</h2>
+        <p class="subtitle">Suivez vos habitudes quotidiennes et surveillez vos progrès.</p>
       </section>
-      
-      <!--Progres du jour-->
-      <section id="progres" class="cards" aria-labelledby="progres-title">
-        <h3 id="progres-title" class="section-title">Progres du jours</h3>
-        <div class="card-grid" role="list">
-          <!--Les cards qui vont etre generer en html et update par le JS-->
-          <article class="card" data-habit="Eau" role="listitem">
-            <div class="card-icon" aria-hidden="true">💧</div>
-            <div class="card-body">
-              <h4>Hydratation</h4>
-              <div class="card-stats">
-                <div class="value" id="card-Eau">5 / 8 verres</div>
-                <div class="pourcentage" id="pourcentageEau">64%</div>
 
-              </div>
-            </div>
-          </article>
-          <article class="card" data-habit="Sommeil" role="listitem">
-            <div class="card-icon" aria-hidden="true">😴</div>
-            <div class="card-body">
-              <h4>Sommeil</h4>
-              <div class="card-stats">
-                <div class="value" id="card-Sommeil">6 / 8 heures</div>
-                <div class="pourcentage" id="cardPourcentage-Sommeil">75%</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" data-habit="Exercice" role="listitem">
-            <div class="card-icon" aria-hidden="true">🏃‍♂️</div>
-            <div class="card-body">
-              <h4>Exercice</h4>
-              <div class="card-stats">
-                <div class="value" id="card-Exercice"> 20 / 30 minutes</div>
-                <div class="pourcentage" id="cardPourcentage-Exercice">67%</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" data-habit="Lecture" role="listitem">
-            <div class="card-icon" aria-hidden="true">📚</div>
-            <div class="card-body">
-              <h4>Lecture</h4>
-              <div class="card-stats">
-                <div class="value" id="card-Lecture"> 30 / 45 minutes</div>
-                <div class="pourcentage" id="cardPourcentage-Lecture">67%</div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
       <!--Formulaire Ajouter Habitude-->
       <section id="ajouter" class="add-section" aria-labelledby="ajouter-title">
-        <h3 id="ajouter-title" class="section-title">Ajouter habitude</h3>
+        <h3 id="ajouter-title" class="section-title">Ajouter une habitude quotidienne</h3>
 
         <form id="habit-form" class="form" novalidate>
           <div class="form-row">
             <label for="habit-select">Habitude</label>
-            <select id="habit-select" required>
-              <option value="">-- Choisir --</option>
-              <option value="Eau">Hydratation (Eau)</option>
+            <select id="habit-select" name="habit-select" required>
+              <option value="Choisir">-- Choisir --</option>
+              <option value="Hydratation">Hydratation</option>
               <option value="Sommeil">Sommeil</option>
               <option value="Exercice">Exercice</option>
               <option value="Lecture">Lecture</option>
@@ -101,17 +51,14 @@
           </div>
 
           <div class="form-row">
-            <label for="quantity">Quantite</label>
-            <input type="number" id="quantity" inputmode="decimal" min="0" step="0.1" placeholder="ex. 8" required>
+            <label for="quantity">Quantité</label>
+            <input type="number" id="quantity" name="quantity" inputmode="decimal" min="0" step="0.1" placeholder="ex. 8" required>
           </div>
 
           <div class="form-row">
-            <label for="unit">Unite</label>
-            <select id="unit" required>
-              <option value="">-- Choisir --</option>
-              <option value="Verres">Verres</option>
-              <option value="Heures">Heures</option>
-              <option value="Minutes">Minutes</option>
+            <label for="unit">Unité</label>
+            <select id="unit" name="unit" required>
+              <option value="">-- Veuillez choisir une habitude --</option>
             </select>
           </div>
 
@@ -121,10 +68,60 @@
         </form>
       </section>
       
+      <!--Progres du jour (Cartes)-->
+      <section id="progres" class="cards hidden" aria-labelledby="progres-title">
+        <h3 id="progres-title" class="section-title">Progrès du jours</h3>
+        <div class="card-grid" role="list">
+          <!--Les cards qui vont etre generer en html et update par le JS-->
+          <article class="card hidden" id="card-Hydratation" data-habit="Hydratation" role="listitem">
+            <div class="card-icon" aria-hidden="true">💧</div>
+            <div class="card-body">
+              <h4>Hydratation</h4>
+              <div class="card-stats">
+                <div class="value" id="cardText-Hydratation">5 / 8 verres</div>
+                <div class="pourcentage" id="cardPourcentage-Hydratation">64%</div>
+              </div>
+            </div>
+          </article>
+          <article class="card hidden" id="card-Sommeil" data-habit="Sommeil" role="listitem">
+            <div class="card-icon" aria-hidden="true">😴</div>
+            <div class="card-body">
+              <h4>Sommeil</h4>
+              <div class="card-stats">
+                <div class="value" id="cardText-Sommeil">6 / 8 heures</div>
+                <div class="pourcentage" id="cardPourcentage-Sommeil">75%</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hidden" id="card-Exercice" data-habit="Exercice" role="listitem">
+            <div class="card-icon" aria-hidden="true">🏃‍♂️</div>
+            <div class="card-body">
+              <h4>Exercice</h4>
+              <div class="card-stats">
+                <div class="value" id="cardText-Exercice"> 20 / 30 minutes</div>
+                <div class="pourcentage" id="cardPourcentage-Exercice">67%</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hidden" id="card-Lecture" data-habit="Lecture" role="listitem">
+            <div class="card-icon" aria-hidden="true">📚</div>
+            <div class="card-body">
+              <h4>Lecture</h4>
+              <div class="card-stats">
+                <div class="value" id="cardText-Lecture"> 30 / 45 minutes</div>
+                <div class="pourcentage" id="cardPourcentage-Lecture">67%</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      
+      
       <!--Habits Tracker (Tableau)-->
-      <section id="suivi" class="tracker" aria-labelledby="table-desc">
+      <section id="suivi" class="tracker hidden" aria-labelledby="table-desc">
           <table class="habits-table" aria-describedby="table-desc">
-          <caption id="table-desc">Tableau montrant l'objectif et le progres pour chaque habitude</caption>
             <thead>
               <tr>
                 <th scope="col">Habitude</th>
@@ -135,7 +132,7 @@
             </thead>
             <tbody id="habits-tbody">
               <!-- Rempli initialement en HTML -->
-              <tr>
+              <tr id="row-Hydratation" class="hidden">
                 <td>Hydratation</td>
                 <td>8 verres</td>
                 <td>
@@ -147,7 +144,8 @@
                 </td>
                 <td>63 %</td>
               </tr>
-              <tr>
+
+              <tr id="row-Sommeil" class="hidden">
                 <td>Sommeil</td>
                 <td>8 heures</td>
                 <td>
@@ -159,7 +157,7 @@
                 <td>75 %</td>
               </tr>
 
-              <tr>
+              <tr id="row-Exercice" class="hidden">
                 <td>Exercice</td>
                 <td>30 minutes</td>
                 <td>
@@ -169,9 +167,9 @@
                   <span class="progress-text">20/30</span> 
                 </td>
                 <td>67 %</td>
-            
               </tr>
-              <tr>
+
+              <tr id="row-Hydratation" class="hidden">
                 <td>Lecture</td>
                 <td>45 minutes</td>
                 <td>
@@ -191,16 +189,15 @@
         <h3 id="conseils-title" class="section-title">Comment adopter des bonnes habitudes</h3>
         <div class="media-grid">
           <div class="video-embed" aria-hidden="false">
-            <!-- Replace the src avec un link de video -->
-             <iframe width="560" height="315" src="" title="Youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y5Mi9WB4s2E?si=0w21179yHynfZR0B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div class="media-text">
             <h4>Conseils rapides</h4>
             <ul>
-              <li>Commence petit : 2 verres d'eau de plus par jour.</li>
-              <li>Associe une action a une habitude existante (trigger).</li>
-              <li>Utilise des objectifs mesurables et adaptes.</li>
-              <li>Recompense-toi quand tu atteins l'objectis.</li>
+              <li>Commence petit: 2 verres d'eau de plus par jour.</li>
+              <li>Associe une action à une habitude existante.</li>
+              <li>Utilise des objectifs mesurables et adaptés.</li>
+              <li>Récompense-toi quand tu atteints l'objectif.</li>
             </ul>
 
           </div>
@@ -212,13 +209,15 @@
   <div class="container footer-inner">
     <p>&copy; 2025 IFT1005</p>
     <ul class="footer-links">
-      <li><a href="#">Privacy</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="google.com">Privacy</a></li>
+      <li><a href="mailto:santehub@gmail.com">Contact</a></li>
     </ul>
   </div>
 </footer>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

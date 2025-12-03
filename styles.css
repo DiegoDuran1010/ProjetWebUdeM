@@ -56,9 +56,14 @@ body{
 .card-stats{display: flex;align-items: center;gap:12px;}
 .card-stats .value{font-weight: 600;color: var(--muted);}
 .card-stats .pourcentage{background: #f1fbf5;padding: 6px 8px;border-radius: 8px;font-weight: 700;color: var(--accent);}
+#card-Hydratation{background: #c5e5d1}
+#card-Sommeil{background: #d9c9f2}
+#card-Exercice{background: #ffd6c2}
+#card-Lecture{background: #c2e8ff}
 
 /* form */
 .add-section .form{display:grid;grid-template-columns: repeat(3,1fr);gap: 12px;align-items: end;background:var(--card);padding: 16px;border-radius: 12px;box-shadow: 0 6px 20px rgba(12,24,40,0.04);}
+.form-row{margin-bottom: 1.5em;}
 .form-row label{display: block;font-size: 13px;color:var(--muted);margin-bottom: 6px;}
 .form-row input[type="number"], .form-row select{
     width: 100%;padding: 10px;border-radius: 8px; border: 1px solid #e6e9ed;background: #fff;font-size: 15px;
@@ -66,6 +71,10 @@ body{
 .form-actions{grid-column: 1/-1;display: flex;justify-content: flex-end;}
 .btn{background: var(--accent);color: #fff;padding: 10px 16px;border-radius: 10px;border: 0;font-weight: 700;cursor: pointer;}
 .btn:hover{filter: brightness(.98);}
+label.error{position: absolute;display: block;font-size: 0.9em;margin-top: 0.25em;}
+
+/* hidden */
+.hidden{display: none}
 
 /* table */
 .table-wrapper{background: var(--card);padding: 12px;border-radius: 12px;box-shadow: 0 6px 20px rgba(16, 24, 40, 0.04);}
@@ -90,7 +99,7 @@ body{
     transition: width 0.3s ease-in-out;
 }
 
-.progrss-text{
+.progress-text{
     margin-left: 10px;
     color: #111;
     font-size: 14px;
