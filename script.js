@@ -1,3 +1,8 @@
+/* Auteurs :
+Pierre-Nathan Duchesne (20307443)
+Diego Felipe Duran Lezama ()
+*/
+
 $(document).ready(function () {
 
 // Constantes ("But/habitude": "Max", "unité par défaut")
