@@ -1,5 +1,3 @@
-/* styles.css - responsive, propre*/
-
 :root{
     --bg:#f6f9f6;
     --card:#ffffff;
@@ -22,21 +20,20 @@ body{
     line-height: 1.4;
 }
 
-
 /* container */
 .container{max-width: var(--container);margin: 0 auto;padding: 20px;}
 
 /* Header */
-.site-header{background:transparent;padding: 12px 0;position: sticky;top: 0;z-index: 10;}
+.site-header{background-color: var(--accent);padding: 12px 0;position: sticky;top: 0;z-index: 10;}
 .header-inner{display: flex;align-items: center;justify-content: space-between;gap: 16px;}
 .brand{display: flex;align-items: center;gap: 12px;}
-.brand h1{font-size: 20px;margin: 0;color: var(--accent)}
+.brand h1{font-size: 20px;margin: 0;color: #ffffff}
 .logo{width: 44px;height: 44px;}
 
 /* nav */
 .nav{list-style: none;margin: 0;padding: 0;display: flex;gap: 14px;}
-.nav a{color:var(--muted);text-decoration: none;padding: 8px 12px;border-radius: 8px;}
-.nav a:hover, .nav a:focus{background:#e8f6ea;color: var(--accent);}
+.nav a{color:#ffffff;text-decoration: none;padding: 8px 12px;border-radius: 8px;}
+.nav a:hover, .nav a:focus{background:#e8f6ea;color: var(--text);}
 
 /* grid layout (main) */
 .main-grid{display: grid;grid-template-columns: 1fr;gap:var(--gap);padding: 8px 0;}

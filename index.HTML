@@ -10,10 +10,7 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">
-          <svg class="logo" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-          <circle cx="50" cy="50" r="45" fill="#2f855a"/>
-          <path d="M30 55c6-8 14-16 26-10 10 5 12 18 2 26-10 8-28 1-28-16" fill="#fff"/>
-          </svg>
+          <img src="resources/logo.svg" alt="" />
           <h1>SantéHub</h1>
         </div>
         <nav aria-label="Navigation Principale">
@@ -21,7 +18,6 @@
             <li><a href="#ajouter">Ajouter</a></li>
             <li><a href="#progres">Progrès</a></li>
             <li><a href="#suivi">Suivi</a></li>
-
           </ul>
         </nav>
       </div>
@@ -34,10 +30,10 @@
         <p class="subtitle">Suivez vos habitudes quotidiennes et surveillez vos progrès.</p>
       </section>
 
-      <!--Formulaire Ajouter Habitude-->
+      <!--Formulaire-->
       <section id="ajouter" class="add-section" aria-labelledby="ajouter-title">
         <h3 id="ajouter-title" class="section-title">Ajouter une habitude quotidienne</h3>
-
+        <!-- Formulaire: Choix habitude -->
         <form id="habit-form" class="form" novalidate>
           <div class="form-row">
             <label for="habit-select">Habitude</label>
@@ -50,11 +46,13 @@
             </select>
           </div>
 
+          <!-- Formulaire: Choix quantité -->
           <div class="form-row">
             <label for="quantity">Quantité</label>
             <input type="number" id="quantity" name="quantity" inputmode="decimal" min="0" step="0.1" placeholder="ex. 8" required>
           </div>
 
+          <!-- Formulaire: Choix unité -->
           <div class="form-row">
             <label for="unit">Unité</label>
             <select id="unit" name="unit" required>
@@ -72,9 +70,11 @@
       <section id="progres" class="cards hidden" aria-labelledby="progres-title">
         <h3 id="progres-title" class="section-title">Progrès du jours</h3>
         <div class="card-grid" role="list">
-          <!--Les cards qui vont etre generer en html et update par le JS-->
+          <!-- Carte "Hydratation" -->
           <article class="card hidden" id="card-Hydratation" data-habit="Hydratation" role="listitem">
-            <div class="card-icon" aria-hidden="true">💧</div>
+            <div class="card-icon">
+              <img src="resources/hydratation.svg" alt="" />
+            </div>
             <div class="card-body">
               <h4>Hydratation</h4>
               <div class="card-stats">
@@ -83,8 +83,12 @@
               </div>
             </div>
           </article>
+
+          <!-- Carte "Sommeil" -->
           <article class="card hidden" id="card-Sommeil" data-habit="Sommeil" role="listitem">
-            <div class="card-icon" aria-hidden="true">😴</div>
+            <div class="card-icon">
+              <img src="resources/sommeil.svg" alt="" />
+            </div>
             <div class="card-body">
               <h4>Sommeil</h4>
               <div class="card-stats">
@@ -94,8 +98,11 @@
             </div>
           </article>
 
+          <!-- Carte "Exercice" -->
           <article class="card hidden" id="card-Exercice" data-habit="Exercice" role="listitem">
-            <div class="card-icon" aria-hidden="true">🏃‍♂️</div>
+            <div class="card-icon">
+              <img src="resources/sport.svg" alt="" />
+            </div>
             <div class="card-body">
               <h4>Exercice</h4>
               <div class="card-stats">
@@ -105,8 +112,11 @@
             </div>
           </article>
 
+          <!-- Carte "Lecture" -->
           <article class="card hidden" id="card-Lecture" data-habit="Lecture" role="listitem">
-            <div class="card-icon" aria-hidden="true">📚</div>
+            <div class="card-icon">
+              <img src="resources/lecture.svg" alt="" />
+            </div>
             <div class="card-body">
               <h4>Lecture</h4>
               <div class="card-stats">
@@ -131,7 +141,7 @@
               </tr>
             </thead>
             <tbody id="habits-tbody">
-              <!-- Rempli initialement en HTML -->
+              <!-- Tableau: rangée "Hydratation" -->
               <tr id="row-Hydratation" class="hidden">
                 <td>Hydratation</td>
                 <td>8 verres</td>
@@ -145,6 +155,7 @@
                 <td>63 %</td>
               </tr>
 
+              <!-- Tableau: rangée "Sommeil" -->
               <tr id="row-Sommeil" class="hidden">
                 <td>Sommeil</td>
                 <td>8 heures</td>
@@ -157,6 +168,7 @@
                 <td>75 %</td>
               </tr>
 
+              <!-- Tableau: rangée "Exercice" -->
               <tr id="row-Exercice" class="hidden">
                 <td>Exercice</td>
                 <td>30 minutes</td>
@@ -169,6 +181,7 @@
                 <td>67 %</td>
               </tr>
 
+              <!-- Tableau: rangée "Lecture" -->
               <tr id="row-Lecture" class="hidden">
                 <td>Lecture</td>
                 <td>45 minutes</td>
@@ -199,7 +212,6 @@
               <li>Utilise des objectifs mesurables et adaptés.</li>
               <li>Récompense-toi quand tu atteints l'objectif.</li>
             </ul>
-
           </div>
         </div>
        </section>
