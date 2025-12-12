@@ -1,6 +1,6 @@
 /* Auteurs :
 Pierre-Nathan Duchesne (20307443)
-Diego Felipe Duran Lezama ()
+Diego Felipe Duran Lezama (20246326)
 */
 
 $(document).ready(function () {
