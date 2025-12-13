@@ -23,7 +23,6 @@ const progress = {
 
 // Unités possibles pour chaque habitude
 const habitUnits = {
-    "Choisir": ["-- Veuillez choisir une habitude --"],
     "Hydratation": ["Verres"],
     "Sommeil": ["Heures", "Minutes"],
     "Exercice": ["Minutes", "Heures"],
@@ -34,14 +33,14 @@ const habitUnits = {
 $("#habit-select").on("change", function() {
     const habit = $(this).val();
     const unitSelect = $("#unit");
+    // Rajouter --Veuillez choisir...-- pour le choix d'habitude "--Choisir--"
+    const units = habitUnits[habit] || ["-- Veuillez choisir une habitude --"];
 
     unitSelect.empty();
-
-    if (habit && habitUnits[habit]) {
-        habitUnits[habit].forEach(u => {
-            unitSelect.append(`<option value="${u}">${u}</option>`);
-        });
-    }
+    
+    units.forEach(u => {
+        unitSelect.append(`<option value="${u}">${u}</option>`);
+    });
 });
 
 // Gère les conversions d'unités (heures-minutes)

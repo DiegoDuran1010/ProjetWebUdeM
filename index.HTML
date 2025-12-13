@@ -9,16 +9,16 @@ Diego Felipe Duran Lezama (20246326)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SantéHub - Tableau de bord</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">
-          <img src="resources/logo.svg" alt="" />
+          <img src="resources/logo.svg" alt="">
           <h1>SantéHub</h1>
         </div>
-        <nav aria-label="Navigation Principale">
+        <nav>
           <ul class="nav">
             <li><a href="#ajouter">Ajouter</a></li>
             <li><a href="#progres">Progrès</a></li>
@@ -30,20 +30,20 @@ Diego Felipe Duran Lezama (20246326)
 
     <main class="container main-grid">
       <!--Tableau de bord intro-->
-      <section class="hero" aria-labelledby="titre-principal">
+      <section class="hero">
         <h2 id="titre-principal">SantéHub</h2>
         <p class="subtitle">Suivez vos habitudes quotidiennes et surveillez vos progrès.</p>
       </section>
 
       <!--Formulaire-->
-      <section id="ajouter" class="add-section" aria-labelledby="ajouter-title">
+      <section id="ajouter" class="add-section">
         <h3 id="ajouter-title" class="section-title">Ajouter une habitude quotidienne</h3>
         <!-- Formulaire: Choix habitude -->
         <form id="habit-form" class="form" novalidate>
           <div class="form-row">
             <label for="habit-select">Habitude</label>
             <select id="habit-select" name="habit-select" required>
-              <option value="Choisir">-- Choisir --</option>
+              <option value="">-- Choisir --</option>
               <option value="Hydratation">Hydratation</option>
               <option value="Sommeil">Sommeil</option>
               <option value="Exercice">Exercice</option>
@@ -72,13 +72,13 @@ Diego Felipe Duran Lezama (20246326)
       </section>
       
       <!--Progres du jour (Cartes)-->
-      <section id="progres" class="cards hidden" aria-labelledby="progres-title">
+      <section id="progres" class="cards hidden">
         <h3 id="progres-title" class="section-title">Progrès du jours</h3>
         <div class="card-grid" role="list">
           <!-- Carte "Hydratation" -->
-          <article class="card hidden" id="card-Hydratation" data-habit="Hydratation" role="listitem">
+          <article class="card hidden" id="card-Hydratation">
             <div class="card-icon">
-              <img src="resources/hydratation.svg" alt="" />
+              <img src="resources/hydratation.svg" alt="">
             </div>
             <div class="card-body">
               <h4>Hydratation</h4>
@@ -90,9 +90,9 @@ Diego Felipe Duran Lezama (20246326)
           </article>
 
           <!-- Carte "Sommeil" -->
-          <article class="card hidden" id="card-Sommeil" data-habit="Sommeil" role="listitem">
+          <article class="card hidden" id="card-Sommeil">
             <div class="card-icon">
-              <img src="resources/sommeil.svg" alt="" />
+              <img src="resources/sommeil.svg" alt="">
             </div>
             <div class="card-body">
               <h4>Sommeil</h4>
@@ -104,9 +104,9 @@ Diego Felipe Duran Lezama (20246326)
           </article>
 
           <!-- Carte "Exercice" -->
-          <article class="card hidden" id="card-Exercice" data-habit="Exercice" role="listitem">
+          <article class="card hidden" id="card-Exercice">
             <div class="card-icon">
-              <img src="resources/sport.svg" alt="" />
+              <img src="resources/sport.svg" alt="">
             </div>
             <div class="card-body">
               <h4>Exercice</h4>
@@ -118,7 +118,7 @@ Diego Felipe Duran Lezama (20246326)
           </article>
 
           <!-- Carte "Lecture" -->
-          <article class="card hidden" id="card-Lecture" data-habit="Lecture" role="listitem">
+          <article class="card hidden" id="card-Lecture">
             <div class="card-icon">
               <img src="resources/lecture.svg" alt="" />
             </div>
@@ -135,78 +135,79 @@ Diego Felipe Duran Lezama (20246326)
       
       
       <!--Habits Tracker (Tableau)-->
-      <section id="suivi" class="tracker hidden" aria-labelledby="table-desc">
-          <table class="habits-table" aria-describedby="table-desc">
-            <thead>
-              <tr>
-                <th scope="col">Habitude</th>
-                <th scope="col">But</th>
-                <th scope="col">Progres</th>
-                <th scope="col">% Complete</th>
-              </tr>
-            </thead>
-            <tbody id="habits-tbody">
-              <!-- Tableau: rangée "Hydratation" -->
-              <tr id="row-Hydratation" class="hidden">
-                <td>Hydratation</td>
-                <td>8 verres</td>
-                <td>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 63%;"></div>
-                    
-                  </div>
-                  <span class="progress-text"> 5/8</span>
-                </td>
-                <td>63 %</td>
-              </tr>
+      <section id="suivi" class="table-wrapper hidden">
+        <h4>Suivi des habitudes</h4>
+        <table class="habits-table">
+          <thead>
+            <tr>
+              <th scope="col">Habitude</th>
+              <th scope="col">But</th>
+              <th scope="col">Progres</th>
+              <th scope="col">% Complete</th>
+            </tr>
+          </thead>
 
-              <!-- Tableau: rangée "Sommeil" -->
-              <tr id="row-Sommeil" class="hidden">
-                <td>Sommeil</td>
-                <td>8 heures</td>
-                <td>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 75%;"></div>
-                  </div>
-                  <span class="progress-text">6/8</span>
-                </td>
-                <td>75 %</td>
-              </tr>
+          <tbody id="habits-tbody">
+            <!-- Tableau: rangée "Hydratation" -->
+            <tr id="row-Hydratation" class="hidden">
+              <td>Hydratation</td>
+              <td>8 verres</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 63%;"></div>
+                  
+                </div>
+                <span class="progress-text"> 5/8</span>
+              </td>
+              <td>63 %</td>
+            </tr>
 
-              <!-- Tableau: rangée "Exercice" -->
-              <tr id="row-Exercice" class="hidden">
-                <td>Exercice</td>
-                <td>30 minutes</td>
-                <td>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 67%"></div>
-                  </div>
-                  <span class="progress-text">20/30</span> 
-                </td>
-                <td>67 %</td>
-              </tr>
+            <!-- Tableau: rangée "Sommeil" -->
+            <tr id="row-Sommeil" class="hidden">
+              <td>Sommeil</td>
+              <td>8 heures</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 75%;"></div>
+                </div>
+                <span class="progress-text">6/8</span>
+              </td>
+              <td>75 %</td>
+            </tr>
 
-              <!-- Tableau: rangée "Lecture" -->
-              <tr id="row-Lecture" class="hidden">
-                <td>Lecture</td>
-                <td>45 minutes</td>
-                <td>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 67%;"></div>
-                  </div>
-                  <span class="progress-text">30/45</span>
-                </td>
-                <td>67 %</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            <!-- Tableau: rangée "Exercice" -->
+            <tr id="row-Exercice" class="hidden">
+              <td>Exercice</td>
+              <td>30 minutes</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 67%"></div>
+                </div>
+                <span class="progress-text">20/30</span> 
+              </td>
+              <td>67 %</td>
+            </tr>
+
+            <!-- Tableau: rangée "Lecture" -->
+            <tr id="row-Lecture" class="hidden">
+              <td>Lecture</td>
+              <td>45 minutes</td>
+              <td>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 67%;"></div>
+                </div>
+                <span class="progress-text">30/45</span>
+              </td>
+              <td>67 %</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
       <!-- Comment adopter de bonnes habitudes (multimedia) -->
-       <section id="conseils" class="media" aria-labelledby="conseils-title">
+       <section id="conseils" class="media">
         <h3 id="conseils-title" class="section-title">Comment adopter des bonnes habitudes</h3>
         <div class="media-grid">
-          <div class="video-embed" aria-hidden="false">
+          <div class="video-embed">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Y5Mi9WB4s2E?si=0w21179yHynfZR0B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div class="media-text">
