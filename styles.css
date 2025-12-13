@@ -1,6 +1,6 @@
 /* Auteurs :
 Pierre-Nathan Duchesne (20307443)
-Diego Felipe Duran Lezama (20246326)
+Diego Felipe Duran Lezama ()
 */
 
 :root{
@@ -20,10 +20,11 @@ html,body{height: 100%;}
 body{
     margin: 0;
     background: linear-gradient(180deg,#f7faf7 0%, var(--bg)100%);
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
     line-height: 1.4;
 }
+
+/* sinon le header cache le top de la section après avoir utilisé le navbar */
+section{scroll-margin-top: 90px;} 
 
 /* container */
 .container{max-width: var(--container);margin: 0 auto;padding: 20px;}
@@ -80,6 +81,7 @@ label.error{position: absolute;display: block;font-size: 0.9em;margin-top: 0.25e
 
 /* table */
 .table-wrapper{background: var(--card);padding: 12px;border-radius: 12px;box-shadow: 0 6px 20px rgba(16, 24, 40, 0.04);}
+.table-wrapper h4{margin-top: 0;}
 .habits-table{width: 100%;border-collapse: collapse;font-size: 14px;}
 .habits-table thead th{text-align: left;padding: 10px 8px;border-bottom: 2px solid #eef2f7;color: var(--muted);}
 .habits-table tbody td{padding: 12px 8px;border-bottom: 1px solid #f1f5f9;}
